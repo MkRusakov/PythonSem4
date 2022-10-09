@@ -9,13 +9,17 @@ with open("file2.txt", "r", encoding="utf8") as f:
 data11 = data1.split("+")
 data22 = data2.split("+")
 
-result = ''
+first = str(data11[0])
+first1 = str(data22[0])
+result1 = int(first[0]) + int(first1[0])
 
-for i in range(0, len(data11), +1):
-    a, b = str(data11[i]), str(data22[i])
-    a, b = a[0], b[0]
-    current = int(a) + int(b)
-    result += current
+first = str(data11[1])
+first1 = str(data22[1])
+result2 = int(first[0]) + int(first1[0])
 
-print(data11)
-print(data22)
+first = str(data11[2])
+first1 = str(data22[2])
+result3 = int(first[0]) + int(first1[0])
+
+with open("file_task5.txt", "w", encoding="utf8") as f:
+        f.write(f"{result1} x^2 + {result2} x + {result3}")
